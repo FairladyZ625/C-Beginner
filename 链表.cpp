@@ -27,17 +27,28 @@ int main()
 	print(&list);
 	scanf("%d",&number);
 	Node *p;
-	int isfound=0;
-	for (p=list.head ;p;p->next ){
+	Node *q;
+	for (q=NULL,p=list.head ;p;q=p,p->next ){
 		if (p->value  == number){
-			printf("yes\n");
-			isfound =1;
+			if (q){
+				q->next=p->next; 
+				free(p);
+			}else {
+				list.head=p->next;
+			}
+			free (p);
 			break;
 		}
-		if ( isfound==0){
-			printf("not found\n");
+	if ( isfound==0){
+		printf("not found\n");
 		}
 	}
+	for (p=head;p;p=q){
+		q=p->next ;
+		free (p);
+	}
+	
+	
 	return 0; 
 }
 
