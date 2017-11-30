@@ -1,2 +1,6 @@
 
 *.exe
+max.dev
+Makefile.win
+max.o
+第一个结构函数.o
