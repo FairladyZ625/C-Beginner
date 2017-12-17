@@ -1,9 +1,10 @@
 # include<Stdio.h>
 
+
 struct {
 	int amount;
 	char *name;
-}coins[]={
+}coins [] = {
 	{1,"penny"},
 	{5,"nickel"}, 
 	{10,"dime"},
