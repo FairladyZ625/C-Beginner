@@ -21,14 +21,35 @@ void mouseListener(int x,int y,int button,int event)
 	ox=x;
 	oy=y;
 }
+
+void keyListener(int key,int event)
+{
+	printf("key=%d,event=%d\n",key,event);
+}
+
+void timerListener(int id)
+{
+	static int cnt=0;
+	printf("Id=%d\n",id);
+	if (id==0)
+	{
+		cnt++;
+		if(cnt==5)
+			cancelTimer(0);
+	 } 
+}
 int Setup()
 {
 	initWindow("test",DEFAULT,DEFAULT,800,600);
 	initConsole();
 	printf("hello\n");
 	int x;
-	
+	registerTimerEvent(timerListener);
 	registerMouseEvent(mouseListener);
+	registerKeyboardEvent(keyListener);
+	startTimer(0,500);
+	startTimer(1,500);
+	
 	beginPaint();
 	line(10,10,100,100);
 	
