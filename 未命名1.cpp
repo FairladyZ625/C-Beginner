@@ -1,17 +1,19 @@
-# include<Stdio.h>
-# include<string.h>
-int main()
+int huajian(int *c,int *d)
 {
-	char str[1024];
-	int i =0 ;
-	while ((str[i]=getchar())!='\n')
-	{
-		i++;
-		getchar();
-	}
-	for (int b=0;b<i;b++)
-	{
-		printf("%c",str[b]);	
-	}
-	return 0;
+	int i=0;
+	int e=*c;
+	int f=*d;
+	do{
+		i=e/f;
+		if ((e%i == 0)&&(f%i == 0)){
+			e/=i;
+			f/=i;
+			continue;
+		}else{
+			break;
+		}
+		
+	}while (1);
+	*c=e;
+	*d=f;
 }

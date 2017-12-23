@@ -15,6 +15,7 @@ int main()
 			continue;
 		}else if (a[i/2]<k){
 			i+=i/2;
+			continue;
 		}else if(a[i/2]=k){
 			printf("Found it! it is in No.%d",i/2+1);
 			break;
