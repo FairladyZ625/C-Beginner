@@ -15,8 +15,9 @@ int main()
 
 int f(void)
 {
+	
 	printf("in %s gall= %d\n",__func__,gall);
 	gall+=2;
-	printf("agn in %S gall =%d\n",__func__,gall);
+	printf("agn in %s gall =%d\n",__func__,gall);
 	return gall;
 }

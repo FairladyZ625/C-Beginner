@@ -1,15 +1,14 @@
 # include<stdio.h>
+
+int gAll =10;
 int main()
 {
-	int a[5][5];
-	for (int i=0;i<2;i++){
-		for (int j=0;j<5;j++)
-			scanf("%d",&a[i][j]);
-		}
-	for (int i=0;i<2;i++){
-		for (int j=0;j<5;j++)
-			printf("%d ",a[i][j]);
-		printf("\n");
-		}
+	int k=0;
+	static int all=1;
+	printf("&gAll=%p\n",&gAll);
+	printf("&all =%p\n",&all);
+	printf("&k =%p\n",&k);
+	
 	return 0;
-	}
+	
+}
