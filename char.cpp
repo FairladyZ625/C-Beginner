@@ -1,11 +1,10 @@
 # include<stdio.h>
-int main (void)
+
+int main()
 {
-	char *s ="hello world!";
-	s[0]='B';
-	
-	printf("here! s[0]=%c\n",s[0]);
-	
+	char str1[5],str2[5],str3[5];
+	scanf("%s%s%s",str1,str2,str3);
+
+	printf("I am fine,Fuck you") ;
 	return 0;
-	}
- 
+ } 
