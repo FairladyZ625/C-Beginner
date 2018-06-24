@@ -1,26 +1,23 @@
-# include<Stdio.h>
+# include<stdio.h>
 
 int main()
 {
-	enum COLOR {RED , YELLOW ,GREEN,NumCOLORS};
-	
-	int main( ){
-		int color = -1;
-		char *ColorNames[NumCOLORS]={
-		"red ", "yellow","green"};
-		char * colorname=NULL;
-		
-		printf("color number");
-		scanf("%d",&color);
-		if ( color>=0 && color < NumCOLORS){
-			colorName =ColorNames[color];
-			
-		}else {
-			colorName="unknown";
-			
-		}	
-		printf(" you favorite color is %s\n",colorName);
-		return 0;	
+	int a[10]={49,50,28,48,12,90,27,23,99,20};
+	int i,j,k; 
+	int t;
+	for(i=0;i<9;i++){
+		k=i;
+		for(j=i+1;j<10;j++){
+			if(a[k]<a[j]) k=j;
+		}
+		if(k!=i){
+			t=a[i];
+			a[i]=a[k];
+			a[k]=t;
+			}
 	}
+	for(i=0;i<10;i++){
+		printf("%d",a[i]);
+	}
+	return 0;
 }
-
